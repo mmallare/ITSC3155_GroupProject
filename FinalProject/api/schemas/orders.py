@@ -1,6 +1,6 @@
 from datetime import datetime
 from typing import Optional
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from .order_details import OrderDetail
 
 
@@ -22,7 +22,6 @@ class OrderUpdate(BaseModel):
 class Order(OrderBase):
     id: int
     order_date: Optional[datetime] = None
-    order_details: list[OrderDetail] = None
+    order_details: Optional[list[OrderDetail]] = None
 
-    class ConfigDict:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
