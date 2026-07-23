@@ -7,6 +7,7 @@ class Cart(Base):
     __tablename__ = "cart"
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    table_number = Column(Integer, nullable=False)
     subtotal = Column(DECIMAL(8, 2), nullable=False)
     coupon = Column(String(50))
     quantity = Column(Integer, nullable=False)

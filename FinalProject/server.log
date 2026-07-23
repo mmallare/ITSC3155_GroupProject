@@ -1,0 +1,26 @@
+INFO:     Started server process [9332]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:59654 - "GET / HTTP/1.1" 200 OK
+2026-07-23 20:14:23,484 - api.main - INFO - Retrieved 5 menu items
+INFO:     127.0.0.1:59654 - "GET /menu-items HTTP/1.1" 200 OK
+2026-07-23 20:14:23,518 - api.controllers.orders - DEBUG - Retrieved 0 orders
+INFO:     127.0.0.1:59654 - "GET /orders/ HTTP/1.1" 200 OK
+2026-07-23 20:14:23,551 - api.controllers.cart - DEBUG - Retrieved 2 cart items
+INFO:     127.0.0.1:59662 - "GET /cart/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60898 - "GET / HTTP/1.1" 200 OK
+2026-07-23 20:14:25,800 - api.main - INFO - Retrieved 5 menu items
+INFO:     127.0.0.1:60898 - "GET /menu-items HTTP/1.1" 200 OK
+2026-07-23 20:14:25,839 - api.controllers.orders - DEBUG - Retrieved 0 orders
+INFO:     127.0.0.1:60898 - "GET /orders/ HTTP/1.1" 200 OK
+2026-07-23 20:14:25,871 - api.controllers.cart - DEBUG - Retrieved 2 cart items
+INFO:     127.0.0.1:60914 - "GET /cart/ HTTP/1.1" 200 OK
+2026-07-23 20:15:24,416 - api.controllers.orders - DEBUG - Retrieved 0 orders
+INFO:     127.0.0.1:40600 - "GET /orders/ HTTP/1.1" 200 OK
+2026-07-23 20:15:24,421 - api.controllers.cart - DEBUG - Retrieved 2 cart items
+INFO:     127.0.0.1:40614 - "GET /cart/ HTTP/1.1" 200 OK
+2026-07-23 20:16:58,111 - api.controllers.orders - DEBUG - Retrieved 0 orders
+INFO:     127.0.0.1:57662 - "GET /orders/ HTTP/1.1" 200 OK
+2026-07-23 20:16:58,118 - api.controllers.cart - DEBUG - Retrieved 2 cart items
+INFO:     127.0.0.1:57674 - "GET /cart/ HTTP/1.1" 200 OK

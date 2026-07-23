@@ -1,0 +1,37 @@
+2026-07-23 20:13:43,498 - api.main - INFO - Retrieved 5 menu items
+2026-07-23 20:13:43,538 - api.controllers.orders - DEBUG - Retrieved 0 orders
+2026-07-23 20:13:43,563 - api.controllers.cart - DEBUG - Retrieved 2 cart items
+2026-07-23 20:13:47,376 - api.main - INFO - Retrieved 5 menu items
+2026-07-23 20:13:47,425 - api.controllers.orders - DEBUG - Retrieved 0 orders
+2026-07-23 20:13:47,456 - api.controllers.cart - DEBUG - Retrieved 2 cart items
+2026-07-23 20:14:00,701 - api.controllers.orders - DEBUG - Retrieved 0 orders
+2026-07-23 20:14:00,722 - api.controllers.cart - DEBUG - Retrieved 2 cart items
+2026-07-23 20:14:23,484 - api.main - INFO - Retrieved 5 menu items
+2026-07-23 20:14:23,518 - api.controllers.orders - DEBUG - Retrieved 0 orders
+2026-07-23 20:14:23,551 - api.controllers.cart - DEBUG - Retrieved 2 cart items
+2026-07-23 20:14:25,800 - api.main - INFO - Retrieved 5 menu items
+2026-07-23 20:14:25,839 - api.controllers.orders - DEBUG - Retrieved 0 orders
+2026-07-23 20:14:25,871 - api.controllers.cart - DEBUG - Retrieved 2 cart items
+2026-07-23 20:15:24,416 - api.controllers.orders - DEBUG - Retrieved 0 orders
+2026-07-23 20:15:24,421 - api.controllers.cart - DEBUG - Retrieved 2 cart items
+2026-07-23 20:16:58,111 - api.controllers.orders - DEBUG - Retrieved 0 orders
+2026-07-23 20:16:58,118 - api.controllers.cart - DEBUG - Retrieved 2 cart items
+2026-07-23 21:10:44,167 - api.main - INFO - Retrieved 5 menu items
+2026-07-23 21:10:44,284 - api.controllers.orders - DEBUG - Retrieved 0 orders
+2026-07-23 21:10:44,290 - api.controllers.cart - DEBUG - Retrieved 2 cart items
+2026-07-23 21:10:47,489 - api.main - INFO - Retrieved 5 menu items
+2026-07-23 21:10:47,551 - api.controllers.orders - DEBUG - Retrieved 0 orders
+2026-07-23 21:10:47,618 - api.controllers.cart - DEBUG - Retrieved 2 cart items
+2026-07-23 21:33:53,564 - api.main - INFO - Retrieved 5 menu items
+2026-07-23 21:33:53,623 - api.controllers.orders - DEBUG - Retrieved 0 orders
+2026-07-23 21:33:53,649 - api.controllers.cart - DEBUG - Retrieved 2 cart items
+2026-07-23 21:34:26,508 - api.controllers.orders - DEBUG - Retrieved 0 orders
+2026-07-23 21:34:26,512 - api.controllers.cart - DEBUG - Retrieved 2 cart items
+2026-07-23 21:34:42,959 - api.controllers.orders - INFO - Order created: ID=1, Table=5, Customer=PJ Yang
+2026-07-23 21:34:42,999 - api.controllers.cart - INFO - Cart item deleted: ID=2
+2026-07-23 21:34:43,033 - api.controllers.cart - DEBUG - Retrieved 1 cart items
+2026-07-23 21:34:43,074 - api.controllers.orders - DEBUG - Retrieved 1 orders
+2026-07-23 21:42:43,401 - api.controllers.orders - DEBUG - Retrieved 1 orders
+2026-07-23 21:42:52,709 - api.main - INFO - Retrieved 5 menu items
+2026-07-23 21:42:52,745 - api.controllers.orders - DEBUG - Retrieved 1 orders
+2026-07-23 21:42:52,781 - api.controllers.cart - DEBUG - Retrieved 1 cart items

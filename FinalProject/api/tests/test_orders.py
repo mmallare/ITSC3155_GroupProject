@@ -24,6 +24,7 @@ def fake_order_model(monkeypatch):
 
 def test_create_order(db_session, fake_order_model):
     order_data = {
+        "table_number": 4,
         "customer_name": "John Doe",
         "description": "Test order"
     }
@@ -33,6 +34,7 @@ def test_create_order(db_session, fake_order_model):
     created_order = controller.create(db_session, order_object)
 
     assert created_order is not None
+    assert created_order.table_number == 4
     assert created_order.customer_name == "John Doe"
     assert created_order.description == "Test order"
     db_session.add.assert_called_once()
@@ -41,7 +43,7 @@ def test_create_order(db_session, fake_order_model):
 
 
 def test_read_all_orders(db_session, fake_order_model):
-    order = FakeOrder(customer_name="John Doe", description="Test order")
+    order = FakeOrder(table_number=4, customer_name="John Doe", description="Test order")
     db_session.query.return_value.all.return_value = [order]
 
     result = controller.read_all(db_session)
@@ -51,7 +53,7 @@ def test_read_all_orders(db_session, fake_order_model):
 
 
 def test_read_one_order(db_session, fake_order_model):
-    order = FakeOrder(customer_name="John Doe", description="Test order")
+    order = FakeOrder(table_number=4, customer_name="John Doe", description="Test order")
     db_session.query.return_value.filter.return_value.first.return_value = order
 
     result = controller.read_one(db_session, item_id=1)
@@ -61,24 +63,24 @@ def test_read_one_order(db_session, fake_order_model):
 
 
 def test_update_order(db_session, fake_order_model):
-    order = FakeOrder(customer_name="John Doe", description="Test order")
+    order = FakeOrder(table_number=4, customer_name="John Doe", description="Test order")
     filter_query = db_session.query.return_value.filter.return_value
     filter_query.first.return_value = order
 
-    request = schema.OrderUpdate(customer_name="Jane Doe", description="Updated order")
+    request = schema.OrderUpdate(table_number=7, customer_name="Jane Doe", description="Updated order")
 
     result = controller.update(db_session, item_id=1, request=request)
 
     assert result == order
     filter_query.update.assert_called_once_with(
-        {"customer_name": "Jane Doe", "description": "Updated order"},
+        {"table_number": 7, "customer_name": "Jane Doe", "description": "Updated order"},
         synchronize_session=False,
     )
     db_session.commit.assert_called_once()
 
 
 def test_delete_order(db_session, fake_order_model):
-    order = FakeOrder(customer_name="John Doe", description="Test order")
+    order = FakeOrder(table_number=4, customer_name="John Doe", description="Test order")
     filter_query = db_session.query.return_value.filter.return_value
     filter_query.first.return_value = order
 

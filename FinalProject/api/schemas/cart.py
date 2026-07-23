@@ -1,10 +1,9 @@
-from datetime import datetime
 from typing import Optional
-from pydantic import BaseModel
-from .order_details import OrderDetail
+from pydantic import BaseModel, ConfigDict
 from decimal import Decimal
 
 class CartBase(BaseModel):
+    table_number: int
     subtotal: Decimal
     coupon: Optional[str] = None
     quantity: int
@@ -17,6 +16,7 @@ class CartCreate(CartBase):
 
 
 class CartUpdate(BaseModel):
+    table_number: Optional[int] = None
     subtotal: Optional[Decimal] = None
     coupon: Optional[str] = None
     quantity: Optional[int] = None
@@ -25,5 +25,4 @@ class CartUpdate(BaseModel):
 class Cart(CartBase):
     id: int
 
-    class ConfigDict:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
