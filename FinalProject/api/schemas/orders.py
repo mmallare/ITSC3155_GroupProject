@@ -1,7 +1,17 @@
 from datetime import datetime
-from typing import Optional
-from pydantic import BaseModel
+from typing import Literal, Optional
+from pydantic import BaseModel, ConfigDict
 from .order_details import OrderDetail
+
+
+OrderStatus = Literal[
+    "received",
+    "preparing",
+    "ready",
+    "out_for_delivery",
+    "completed",
+    "cancelled"
+]
 
 
 
@@ -19,10 +29,15 @@ class OrderUpdate(BaseModel):
     description: Optional[str] = None
 
 
+class OrderStatusUpdate(BaseModel):
+    status: OrderStatus
+
+
 class Order(OrderBase):
     id: int
     order_date: Optional[datetime] = None
+    tracking_number: str
+    status: OrderStatus
     order_details: list[OrderDetail] = None
 
-    class ConfigDict:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
