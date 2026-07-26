@@ -10,21 +10,21 @@ router = APIRouter(
 )
 
 @router.post("/", response_model=schemas.MenuItem)
-def create(request: schemas.MenuItemCreate, db: Session = Depends(get_db())):
+def create(request: schemas.MenuItemCreate, db: Session = Depends(get_db)):
     return controller.create(db=db, request=request)
 
 @router.get("/", response_model=list[schemas.MenuItem])
-def read_all(db: Session = Depends(get_db())):
+def read_all(db: Session = Depends(get_db)):
     return controller.read_all_menu_items(db)
 
 @router.get("/{item_id}", response_model=schemas.MenuItem)
-def read_one(item_id: int, db: Session = Depends(get_db())):
+def read_one(item_id: int, db: Session = Depends(get_db)):
     return controller.read_one_menu_item(db, item_id=item_id)
 
 @router.put("/{item_id}", response_model=schemas.MenuItem)
-def update(item_id: int, request: schemas.MenuItemUpdate, db: Session = Depends(get_db())):
+def update(item_id: int, request: schemas.MenuItemUpdate, db: Session = Depends(get_db)):
     return controller.update_menu_item(db=db, request=request, item_id=item_id)
 
 @router.delete("/{item_id}")
-def delete(item_id: int, db: Session = Depends(get_db())):
+def delete(item_id: int, db: Session = Depends(get_db)):
     return controller.delete_menu_item(db=db, item_id=item_id)
