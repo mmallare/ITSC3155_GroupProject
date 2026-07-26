@@ -1,4 +1,15 @@
-from . import orders, order_details, payment_info, recipes, resources, sandwiches, cart, statistics, menu_items
+from . import (
+    cart,
+    menu_items,
+    order_details,
+    orders,
+    payment_info,
+    promotions,
+    recipes,
+    resources,
+    sandwiches,
+    statistics,
+)
 
 
 def load_routes(app):
@@ -11,3 +22,4 @@ def load_routes(app):
     app.include_router(sandwiches.router)
     app.include_router(statistics.router)
     app.include_router(menu_items.router)
+    app.include_router(promotions.router)
