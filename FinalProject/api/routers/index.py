@@ -12,3 +12,4 @@ def load_routes(app):
     app.include_router(statistics.router)
     app.include_router(menu_items.router)
     app.include_router(resource_management.router)
+    app.include_router(promotions.router)
