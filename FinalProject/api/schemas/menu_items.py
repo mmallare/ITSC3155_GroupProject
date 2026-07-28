@@ -1,6 +1,6 @@
 from datetime import datetime
 from typing import Optional
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from .order_details import OrderDetail
 from decimal import Decimal
 
@@ -23,5 +23,4 @@ class MenuItemUpdate(BaseModel):
 class MenuItem(MenuItemBase):
     id: int
 
-    class ConfigDict:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)

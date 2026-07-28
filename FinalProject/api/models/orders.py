@@ -1,4 +1,5 @@
 from sqlalchemy import Column, ForeignKey, Integer, String, DECIMAL, DATETIME
+from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
 from datetime import datetime
 from uuid import uuid4
@@ -10,7 +11,7 @@ class Order(Base):
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     customer_name = Column(String(100))
-    order_date = Column(DATETIME, nullable=False, server_default=str(datetime.now()))
+    order_date = Column(DATETIME, nullable=False, server_default=func.now())
     description = Column(String(300))
     tracking_number = Column(
         String(36),

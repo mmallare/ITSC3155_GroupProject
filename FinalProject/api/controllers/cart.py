@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from fastapi import HTTPException, status
+from fastapi import HTTPException, status, Response
 from ..models import cart as model
 from sqlalchemy.exc import SQLAlchemyError
 
@@ -70,7 +70,7 @@ def delete_cart(db: Session, cart_id):
 
         cart.delete(synchronize_session=False)
         db.commit()
-        return existing_cart
+        return Response(status_code=status.HTTP_204_NO_CONTENT)
 
     except SQLAlchemyError as e:
         error = str(e.__dict__['orig'])

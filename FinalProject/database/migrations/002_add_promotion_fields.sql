@@ -4,5 +4,5 @@
 USE sandwich_maker_api;
 
 ALTER TABLE promotions
-    ADD COLUMN discount_percent DECIMAL(5,2) NOT NULL,
+    ADD COLUMN discount_percent DECIMAL(5,2) NOT NULL DEFAULT 0.00,
     ADD COLUMN is_active BOOLEAN NOT NULL DEFAULT TRUE;

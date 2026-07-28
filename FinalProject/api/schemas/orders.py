@@ -38,6 +38,6 @@ class Order(OrderBase):
     order_date: Optional[datetime] = None
     tracking_number: str
     status: OrderStatus
-    order_details: list[OrderDetail] = None
+    order_details: Optional[list[OrderDetail]] = None
 
     model_config = ConfigDict(from_attributes=True)
