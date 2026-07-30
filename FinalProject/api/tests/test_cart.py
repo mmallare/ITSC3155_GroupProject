@@ -102,7 +102,9 @@ def test_delete_cart(db_session):
     # Call delete_cart function
     deleted_cart = controller.delete_cart(db=db_session, cart_id=1)
 
-    assert deleted_cart is cart_data
+    assert deleted_cart.status_code == 204
+    cart_query.delete.assert_called_once_with(synchronize_session=False)
+    db_session.commit.assert_called_once()
 
 
 
